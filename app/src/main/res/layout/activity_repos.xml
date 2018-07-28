@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+
+    tools:context=".ReposActivity"
+    android:background="#fff">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/RepToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="?attr/colorPrimary"
+        >
+    </android.support.v7.widget.Toolbar>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ownerIv"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/RepToolbar"/>
+
+    <TextView
+        android:id="@+id/repoName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:layout_below="@+id/RepToolbar"
+        android:layout_toEndOf="@+id/ownerIv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_gravity="center_vertical"
+        />
+
+
+
+    <View
+    android:layout_below="@id/repoName"
+    android:layout_width="wrap_content"
+    android:layout_height="0.5dp"
+    android:background="#d3d3d3"
+        android:id="@+id/div1"/>
+
+    <GridLayout
+        android:id="@+id/grid1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/div1"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:columnCount="7"
+        android:rowCount="2">
+
+        <ImageView
+            android:id="@+id/starsIv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_column="0"
+            android:layout_marginEnd="5dp"
+            android:layout_row="0"
+            android:src="@drawable/ic_star_black_24dp_2" />
+
+        <ImageView
+            android:id="@+id/sizeIv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_column="1"
+            android:layout_marginEnd="5dp"
+            android:layout_row="0"
+            android:src="@drawable/size" />
+
+        <ImageView
+            android:id="@+id/watcherIv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:src="@drawable/watchers" />
+
+        <ImageView
+            android:id="@+id/forksIv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_column="3"
+            android:layout_marginEnd="5dp"
+            android:layout_row="0"
+            android:src="@drawable/fork" />
+
+        <ImageView
+            android:id="@+id/langIv"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_column="4"
+            android:layout_marginEnd="3dp"
+            android:layout_row="0"
+            android:src="@drawable/lang" />
+
+
+
+        <TextView
+            android:id="@+id/starsTv"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_column="0"
+            android:layout_marginEnd="5dp"
+            android:layout_row="1"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/sizeTv"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_column="1"
+            android:layout_marginEnd="5dp"
+            android:layout_row="1"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/watcherTv"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_column="2"
+            android:layout_marginEnd="5dp"
+            android:layout_row="1"
+            android:src="@drawable/watchers"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/forksTv"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_column="3"
+            android:layout_marginEnd="5dp"
+            android:layout_row="1"
+            android:src="@drawable/fork"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/langTv"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_column="4"
+            android:layout_marginEnd="5dp"
+            android:layout_row="1"
+            android:textColor="#000" />
+
+    </GridLayout>
+
+    <ImageButton
+        android:id="@+id/shareBtn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="16dp"
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_reply_black_24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitCenter" />
+
+    <View
+        android:id="@+id/div2"
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/grid1"
+        android:background="#d3d3d3" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/repoTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grid1"
+        >
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/RepoViewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/repoTab"> </android.support.v4.view.ViewPager>
+
+
+
+</RelativeLayout>

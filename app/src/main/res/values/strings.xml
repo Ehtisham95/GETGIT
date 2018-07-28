@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GETGIT</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_user_info">User information</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lua">Lua</string>
+    <string name="cpp">C++</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="java">Java</string>
+</resources>
